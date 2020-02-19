@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Video controls demo</title>
+
+</head>
+
+<body>
+    <video controls id="demo-video">
+        <source type="video/mp4" src="/Nodejs.mp4">
+    </video>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.js"
+    integrity="sha256-bd8XIKzrtyJ1O5Sh3Xp3GiuMIzWC42ZekvrMMD4GxRg=" crossorigin="anonymous"></script>
+<script>
+    let vid = document.getElementById('demo-video')
+    if (vid) {
+        console.log(vid.play);
+        vid.onplay = function () {
+            axios.post("/log", {
+                message: "Video playing."
+            }).then(res => {
+                console.log(res);
+            }).catch(err => console.log(err))
+        }
+        vid.onpause = function () {
+            axios.post("/log", {
+                message: "Video paused."
+            }).then(res => {
+                console.log(res);
+            }).catch(err => console.log(err))
+        }
+        vid.onvolumechange = function () {
+            axios.post("/log", {
+                message: "Video volume changed."
+            }).then(res => {
+                console.log(res);
+            }).catch(err => console.log(err))
+        }
+        vid.onseeked = function () {
+            axios.post("/log", {
+                message: "Video seeked."
+            }).then(res => {
+                console.log(res);
+            }).catch(err => console.log(err))
+        }
+
+        vid.addEventListener('webkitfullscreenchange', function () {
+            console.log("Video fullscreen");
+            axios.post("/log", {
+                message: "Video changed to fullscreen."
+            }).then(res => {
+                console.log(res);
+            }).catch(err => console.log(err))
+        })
+
+
+    }
+</script>
+
+</html>

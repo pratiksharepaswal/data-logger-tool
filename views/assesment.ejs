@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background: rgb(75, 71, 70);
+        }
+
+        h2 {
+            margin: 5px 0;
+        }
+
+        #wrapper {
+            width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 10px 15px;
+            border-radius: 10px;
+        }
+
+        input {
+            margin: 5px 10px;
+        }
+
+        button {
+            font-size: 18px;
+            padding: 10px;
+            margin: 20px 0;
+            color: white;
+            border: 0;
+            border-radius: 10px;
+            border-bottom: 3px solid #333;
+        }
+
+        #submit {
+            background: rgb(250, 156, 145);
+        }
+
+        #answer {
+            border: 1px dashed #ccc;
+            background: #eee;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <h1>What you learned from this course?</h1>
+        <p>Take this questionnaire to find out!</p>
+
+        <form id="quiz" method="POST" action="/submit-quiz">
+            <!-- Question 1 -->
+            <h2>For What npm stands for?</h2>
+            <!-- Here are the choices for the first question. Each input tag must have the same name. For this question, the name is q1. -->
+            <!-- The value is which answer the choice corresponds to. -->
+            <label><input id="1a" type="radio" name="q1" value="c1">
+                Node Project Manager
+            </label><br />
+            <label><input id="1b" type="radio" name="q1" value="c2">
+                Node Package Manager
+            </label><br />
+            <label><input id="1c" type="radio" name="q1" value="c3">
+                New Project Manager
+            </label><br />
+            <label><input id="1d" type="radio" name="q1" value="c4">
+                New Package Manager
+            </label><br />
+
+            <!-- Question 2 -->
+            <h2> Node.js works as a?</h2>
+            <!-- Here are the choices for the second question. Notice how each input tag has the same name (q2), but a different name than the previous question. -->
+            <label><input id="2a" type="radio" name="q2" value="c1">
+                Backend
+            </label><br />
+            <label><input id="2b" type="radio" name="q2" value="c2">
+                Frontend
+            </label><br />
+            <label><input id="2c" type="radio" name="q2" value="c3">
+                None of the above
+            </label><br />
+            <label><input id="2d" type="radio" name="q2" value="c4">
+                All of the above
+            </label><br />
+
+
+            <button type="submit" id="submit">Submit Your Answers</button>
+
+        </form>
+
+    </div>
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.js"
+        integrity="sha256-bd8XIKzrtyJ1O5Sh3Xp3GiuMIzWC42ZekvrMMD4GxRg=" crossorigin="anonymous"></script>
+    <script>
+    
+    axios.post('/', {
+        message: "Assesment page loaded"
+    }).then( r => {
+        console.log(r);
+    })
+    //for question1
+        let sub1btn = document.getElementById("1a");
+        if (sub1btn) {
+            sub1btn.onclick = (e) => {
+                axios.post("/", {
+                    message: "answer selected 1a"
+                }).then(res => {
+                    console.log("Response", res);
+                }).catch(err => console.log)
+            }
+        }
+        let sub2btn = document.getElementById("1b");
+        if (sub2btn) {
+            sub2btn.onclick = (e) => {
+                axios.post("/", {
+                    message: "answer selected 1b"
+                }).then(res => {
+                    console.log("Response", res);
+                }).catch(err => console.log)
+            }
+        }
+        let sub3btn = document.getElementById("1c");
+        if (sub3btn) {
+            sub3btn.onclick = (e) => {
+                axios.post("/", {
+                    message: "answer selected 1c"
+                }).then(res => {
+                    console.log("Response", res);
+                }).catch(err => console.log)
+            }
+        }
+        let sub4btn = document.getElementById("1d");
+        if (sub4btn) {
+            sub4btn.onclick = (e) => {
+                axios.post("/", {
+                    message: "answer selected 1d"
+                }).then(res => {
+                    console.log("Response", res);
+                }).catch(err => console.log)
+            }
+        }
+
+
+        //for question2
+        let sub5btn = document.getElementById("2a");
+        if (sub5btn) {
+            sub5btn.onclick = (e) => {
+                axios.post("/", {
+                    message: "answer selected 2a"
+                }).then(res => {
+                    console.log("Response", res);
+                }).catch(err => console.log)
+            }
+        }
+        let sub6btn = document.getElementById("2b");
+        if (sub6btn) {
+            sub6btn.onclick = (e) => {
+                axios.post("/", {
+                    message: "answer selected 2b"
+                }).then(res => {
+                    console.log("Response", res);
+                }).catch(err => console.log)
+            }
+        }
+        let sub7btn = document.getElementById("2c");
+        if (sub7btn) {
+            sub7btn.onclick = (e) => {
+                axios.post("/", {
+                    message: "answer selected 2c"
+                }).then(res => {
+                    console.log("Response", res);
+                }).catch(err => console.log)
+            }
+        }
+        let sub8btn = document.getElementById("2d");
+        if (sub8btn) {
+            sub8btn.onclick = (e) => {
+                axios.post("/", {
+                    message: "answer selected 2d"
+                }).then(res => {
+                    console.log("Response", res);
+                }).catch(err => console.log)
+            }
+        }
+
+        //submit button
+        let subbtn = document.getElementById("submit");
+        if (subbtn) {
+            subbtn.onclick = (e) => {
+                axios.post("/", {
+                    message: "answer is submitted"
+                }).then(res => {
+                    console.log("Response", res);
+                }).catch(err => console.log)
+            }
+        }
+    </script>
+</body>
+
+</html>

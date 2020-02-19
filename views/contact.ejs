@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="xyz">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contact Form Bootstrap</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: rgb(248, 212, 208);
+    }
+  </style>
+</head>
+
+<body class="bg-dark">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-4 mt-5 bg-light rounded">
+        <h1 class="text-center font-weight-bold text-primary">Contact Us</h1>
+        <hr class="bg-light">
+        <h5 class="text-center text-success"></h5>
+        <form action="/response" method="POST" id="form-box" class="p-2">
+          <div class="form-group input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fas fa-user"></i></span>
+            </div>
+            <input type="text" name="name" class="form-control" placeholder="Enter your name" required>
+          </div>
+          <div class="form-group input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+            </div>
+            <input type="email" name="email" class="form-control" placeholder="Enter your email" required>
+          </div>
+          <div class="form-group input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fas fa-at"></i></span>
+            </div>
+            <input type="text" name="subject" class="form-control" placeholder="Enter subject" required>
+          </div>
+          <div class="form-group input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fas fa-comment-alt"></i></span>
+            </div>
+            <textarea name="msg" id="msg" class="form-control" placeholder="Write your message" cols="30" rows="4"
+              required></textarea>
+          </div>
+          <div class="form-group">
+            <input type="submit" name="submit" id="submit" class="btn btn-primary btn-block" value="Send">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.js"
+    integrity="sha256-bd8XIKzrtyJ1O5Sh3Xp3GiuMIzWC42ZekvrMMD4GxRg=" crossorigin="anonymous"></script>
+  <script>
+
+axios.post('/', {
+        message: "Contact page loaded"
+    }).then( r => {
+        console.log(r);
+    })
+    //contact details
+    let sub1btn = document.getElementById("form-box");
+    if (sub1btn) {
+      sub1btn.onclick = (e) => {
+        axios.post("/", {
+          message: "Response collected"
+        }).then(res => {
+          console.log("Response", res);
+        }).catch(err => console.log)
+      }
+    }
+  </script>
+</body>
+
+</html>

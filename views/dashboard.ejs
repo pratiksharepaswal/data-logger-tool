@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+
+    <style type="text/css">
+        .shadow-textarea textarea.form-control::placeholder {
+            font-weight: 300;
+        }
+
+        .shadow-textarea textarea.form-control {
+            padding-left: 0.8rem;
+        }
+    </style>
+    <style type="text/css">
+        .bs-example {
+            margin: 20px;
+        }
+
+        .site-footer {
+            background-color: #26272b;
+            padding: 17px 0 10px;
+            font-size: 15px;
+            line-height: 24px;
+            color: #737373;
+        }
+
+        .site-footer hr {
+            border-top-color: #bbb;
+            opacity: 0.5
+        }
+
+        .site-footer hr.small {
+            margin: 20px 0
+        }
+
+        .site-footer h6 {
+            color: #fff;
+            font-size: 16px;
+            text-transform: uppercase;
+            margin-top: 5px;
+            letter-spacing: 2px
+        }
+
+        .site-footer a {
+            color: #737373;
+        }
+
+        .site-footer a:hover {
+            color: #3366cc;
+            text-decoration: none;
+        }
+
+        .footer-links {
+            padding-left: 0;
+            list-style: none
+        }
+
+        .footer-links li {
+            display: block
+        }
+
+        .footer-links a {
+            color: #737373
+        }
+
+        .footer-links a:active,
+        .footer-links a:focus,
+        .footer-links a:hover {
+            color: #3366cc;
+            text-decoration: none;
+        }
+
+        .footer-links.inline li {
+            display: inline-block
+        }
+
+        .site-footer .social-icons {
+            text-align: right
+        }
+
+        .site-footer .social-icons a {
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            margin-left: 6px;
+            margin-right: 0;
+            border-radius: 100%;
+            background-color: #33353d
+        }
+
+        .copyright-text {
+            margin: 0
+        }
+
+        @media (max-width:991px) {
+            .site-footer [class^=col-] {
+                margin-bottom: 30px
+            }
+        }
+
+        @media (max-width:767px) {
+            .site-footer {
+                padding-bottom: 0
+            }
+
+            .site-footer .copyright-text,
+            .site-footer .social-icons {
+                text-align: center
+            }
+        }
+
+        .social-icons {
+            padding-left: 0;
+            margin-bottom: 0;
+            list-style: none
+        }
+
+        .social-icons li {
+            display: inline-block;
+            margin-bottom: 4px
+        }
+
+        .social-icons li.title {
+            margin-right: 15px;
+            text-transform: uppercase;
+            color: #96a2b2;
+            font-weight: 700;
+            font-size: 13px
+        }
+
+        .social-icons a {
+            background-color: #eceeef;
+            color: #818a91;
+            font-size: 16px;
+            display: inline-block;
+            line-height: 44px;
+            width: 44px;
+            height: 44px;
+            text-align: center;
+            margin-right: 8px;
+            border-radius: 100%;
+            -webkit-transition: all .2s linear;
+            -o-transition: all .2s linear;
+            transition: all .2s linear
+        }
+
+        .social-icons a:active,
+        .social-icons a:focus,
+        .social-icons a:hover {
+            color: #fff;
+            background-color: #29aafe
+        }
+
+        .social-icons.size-sm a {
+            line-height: 34px;
+            height: 34px;
+            width: 34px;
+            font-size: 14px
+        }
+
+        .social-icons a.facebook:hover {
+            background-color: #3b5998
+        }
+
+        .social-icons a.twitter:hover {
+            background-color: #00aced
+        }
+
+        .social-icons a.linkedin:hover {
+            background-color: #007bb6
+        }
+
+        @media (max-width:767px) {
+            .social-icons li.title {
+                display: block;
+                margin-right: 0;
+                font-weight: 600
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="background-color:rgb(250, 156, 145);">
+        <div class="bs-example">
+            <nav class="navbar navbar-expand-md navbar-light bg-light">
+                <a href="#" class="navbar-brand">Dashboard</a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav">
+                        <a href="/assesment" id="assesment" class="nav-item nav-link">Assesment</a>
+                        <a href="/contact" id="contact" class="nav-item nav-link">Contact</a>
+                        <a href="#" class="nav-item nav-link"></a>
+                        <li class="nav-item dropdown">
+                            <a href="#" id="settings" class="nav-link dropdown-toggle"
+                                data-toggle="dropdown">Settings</a>
+                            <div class="dropdown-menu">
+                                <a href="#" class="dropdown-item">Item1</a>
+                                <a href="#" class="dropdown-item">Item2</a>
+                                <a href="#" class="dropdown-item">Item3</a>
+                                <div class="dropdown-divider"></div>
+                                <a href="#" class="dropdown-item">Item4</a>
+                            </div>
+                        </li>
+                        <form class="form-inline">
+                            <input id="sbar" class="form-control mr-sm-2" type="search" placeholder="Search"
+                                aria-label="Search">
+                            <button id="searching" class="btn btn-outline-success my-2 my-sm-0"
+                                type="submit">Search</button>
+                        </form>
+                    </div>
+                    <div class="navbar-nav ml-auto">
+                        <a href="/users/logout" class="btn btn-secondary">Logout</a>
+                    </div>
+                </div>
+            </nav>
+            <td style="padding:20px; background-color:#7ce9e9; vertical-align:top;">
+                <h2>Welcome!!</h2>
+                <video controls style="width:100% ;height:auto;" id="demo-video">
+                    <source type="video/mp4" src="/Nodejs.mp4">
+                </video>
+                <!---   <% videos.forEach(function(video){ %>
+                <div><%= video.name %></div>
+                <div class="video-iframe">
+                    <iframe width="80%" height="460px" src="<%= video.embed_link %>"></iframe>
+                </div>
+                <% video.comments.forEach(function(comment){ %>
+                <div style="border: 2px solid black">
+                    <div class="comment"><%= comment.text %></div>
+                    <div class="comment-username"><%= comment.user.name %></div>
+                </div>
+
+                <% }) %>
+                <div>
+                    <form action="/videos/<%= video._id %>/add-comment" method="POST">
+                        <div class="form-group shadow-textarea">
+                            <h5>Leave a Comment</h5>
+                            <textarea name="comment_text" class="form-control z-depth-1"
+                                id="exampleFormControlTextarea6" rows="3" id="cmmtbar"
+                                placeholder="Write something here..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" id="postbtn" class="btn btn-primary">Post</button>
+                        </div>
+                    </form>
+                </div>
+                <% }) %> -->
+            </td>
+
+        </div>
+    </h1>
+
+
+
+    <!-- Site footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-6 col-xs-12">
+                    <p class="copyright-text">Copyright &copy; 2020 All Rights Reserved
+                    </p>
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <ul class="social-icons">
+                        <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.js"
+        integrity="sha256-bd8XIKzrtyJ1O5Sh3Xp3GiuMIzWC42ZekvrMMD4GxRg=" crossorigin="anonymous"></script>
+    <script>
+        axios.post('/', {
+        message: "Dashboard loaded"
+    }).then( r => {
+        console.log(r);
+    })
+        
+
+
+        let contact = document.getElementById('contact')
+        let navButtonLog = e => {
+            let from = window.location.href
+            let to = e.target.href
+            console.log(from, to);
+            axios.post("/", {
+                message: `from ${from} to ${to}`
+            }).then(console.log)
+
+        }
+        if (contact) {
+
+            contact.addEventListener('click', navButtonLog)
+        }
+
+
+        let assesment = document.getElementById('assesment')
+        let navButtonLog = e => {
+            let from = window.location.href
+            let to = e.target.href
+            console.log(from, to);
+            axios.post("/", {
+                message: `from ${from} to ${to}`
+            }).then(console.log)
+
+        }
+        if (assesment) {
+
+            assesment.addEventListener('click', navButtonLog)
+        }
+
+
+        let vid = document.getElementById('demo-video')
+        if (vid) {
+            console.log(vid.play);
+            vid.onplay = function () {
+                axios.post("/", {
+                    message: "Video playing."
+                }).then(res => {
+                    console.log(res);
+                }).catch(err => console.log(err))
+            }
+            vid.onpause = function () {
+                axios.post("/", {
+                    message: "Video paused."
+                }).then(res => {
+                    console.log(res);
+                }).catch(err => console.log(err))
+            }
+            vid.onvolumechange = function () {
+                axios.post("/", {
+                    message: "Video volume changed."
+                }).then(res => {
+                    console.log(res);
+                }).catch(err => console.log(err))
+            }
+            vid.onseeked = function () {
+                axios.post("/", {
+                    message: "Video seeked."
+                }).then(res => {
+                    console.log(res);
+                }).catch(err => console.log(err))
+            }
+           
+            let vidFullscreenLog = e => {
+                console.log("Video fullscreen");
+                if (document.fullscreen) {
+                    axios.post("/", {
+                        message: "Video changed to fullscreen."
+                    }).then(res => {
+                        console.log(res);
+                    }).catch(err => console.log(err))
+                } else {
+                    axios.post("/", {
+                        message: "video changed to normal."
+                    }).then(res => {
+                        console.log(res);
+                    }).catch(err => console.log(err))
+                }
+            }
+            vid.addEventListener('webkitfullscreenchange', vidFullscreenLog) // For chrome
+            vid.addEventListener('mozfullscreenchange', vidFullscreenLog) // For Mozilla
+            vid.addEventListener('fullscreenchange', vidFullscreenLog) // Default
+        }
+
+        let conbtn = document.getElementById("contact");
+        if (conbtn) {
+            conbtn.onclick = (e) => {
+                axios.post("/contactpage", {
+                    message: "contact page is clicked"
+                }).then(res => {
+                    console.log("Response", res);
+                }).catch(err => console.log)
+            }
+        }
+
+        let exambtn = document.getElementById("assesment");
+        if (exambtn) {
+            exambtn.onclick = (e) => {
+                axios.post("/assesmentpage", {
+                    message: "Assesment page is clicked"
+                }).then(res => {
+                    console.log("Response", res);
+                }).catch(err => console.log)
+            }
+        }
+
+        let setbtn = document.getElementById("settings");
+        if (setbtn) {
+            setbtn.onclick = (e) => {
+                axios.post("/settingspage", {
+                    message: "Settings clicked"
+                }).then(res => {
+                    console.log("Response", res);
+                }).catch(err => console.log)
+            }
+        }
+
+        let sbbtn = document.getElementById("sbar");
+        if (sbbtn) {
+            sbbtn.onclick = (e) => {
+                axios.post("/searchbar", {
+                    message: "Settings clicked"
+                }).then(res => {
+                    console.log("Response", res);
+                }).catch(err => console.log)
+            }
+        }
+
+        let shbtn = document.getElementById("searching");
+        if (shbtn) {
+            shbtn.onclick = (e) => {
+                axios.post("/searchbtn", {
+                    message: "Settings clicked"
+                }).then(res => {
+                    console.log("Response", res);
+                }).catch(err => console.log)
+            }
+        }
+
+        //let cmtbtn = document.getElementById("cmmtbar");
+        // if (cmtbtn) {
+        // cmtbtn.onclick = (e) => {
+        // axios.post("/commentbar", {
+        //      message: "Writting Comment"
+        //    }).then(res => {
+        //        console.log("Response", res);
+        //  }).catch(err => console.log)
+        // }
+        //}
+
+        //    let pbtn = document.getElementById("postbtn");
+        //  if (pbtn) {
+        //    pbtn.onclick = (e) => {
+        //      axios.post("/posting", {
+        //        message: "Comment posted"
+        //  }).then(res => {
+        //     console.log("Response", res);
+        //  }).catch(err => console.log)
+        //   }
+        //  }
+    </script>
+
+</body>
+
+</html>

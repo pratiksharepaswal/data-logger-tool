@@ -1,0 +1,69 @@
+<html>
+
+<body>
+  <div class="row mt-5">
+    <div class="col-md-6 m-auto">
+      <div class="card card-body">
+        <h1 id="log-in" class="text-center mb-3"><i class="fas fa-sign-in-alt"></i> Login</h1>
+
+        <form action="/users/login" method="POST">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email-id" class="form-control" placeholder="Enter Email" />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="pass-word" class="form-control" placeholder="Enter Password" />
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Login</button>
+        </form>
+        <p id="reg-login" class="lead mt-4">
+          No Account? <a href="/users/register">Register</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.js"
+    integrity="sha256-bd8XIKzrtyJ1O5Sh3Xp3GiuMIzWC42ZekvrMMD4GxRg=" crossorigin="anonymous"></script>
+
+  <script>
+
+    let emailbtn = document.getElementById("email-id");
+    if (emailbtn) {
+      emailbtn.onclick = (e) => {
+        axios.post("/emailinfo", {
+          message: "filling email info"
+        }).then(res => {
+          console.log("Response", res);
+        }).catch(err => console.log)
+      }
+    }
+
+    let pwbtn = document.getElementById("pass-word");
+    if (pwbtn) {
+      pwbtn.onclick = (e) => {
+        axios.post("/passwordinfo", {
+          message: "filling password info"
+        }).then(res => {
+          console.log("Response", res);
+        }).catch(err => console.log)
+      }
+    }
+    let rbtn = document.getElementById("reg-login");
+    if (rbtn) {
+      rbtn.onclick = (e) => {
+        axios.post("/regis-login", {
+          message: "clicked on register on login page"
+        }).then(res => {
+          console.log("Response", res);
+        }).catch(err => console.log)
+      }
+    }
+
+
+  </script>
+</body>
+
+</html>
