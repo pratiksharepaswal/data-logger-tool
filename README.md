@@ -4,6 +4,7 @@ It's a data logger tool which logs user clickstreams in database and this projec
 ## Technologies used
 Project is created with:
 * Node.js 
+* Javascript
 * HTML & CSS 
 * MongoDB Compass 
 * Express.js
